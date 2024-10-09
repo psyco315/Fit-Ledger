@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Body Tracker</title>
+    <link rel="stylesheet" href="track.css">
+</head>
+
+<body>
+    <button class="prevPage">&lt;</button>
+
+    <div class="btnBoard">
+        <button class="weight bodyPart">Body Weight</button>
+        <button class="height bodyPart">Height</button>
+        <button class="shoulder bodyPart">Shoulder</button>
+        <button class="chest bodyPart">Chest</button>
+        <button class="bicep bodyPart">Bicep</button>
+        <button class="forearm bodyPart">Forearm</button>
+        <button class="waist bodyPart">Waist</button>
+        <button class="hip bodyPart">Hip</button>
+        <button class="thigh bodyPart">Thigh</button>
+        <button class="calf bodyPart">Calf</button>
+    </div>
+
+    <div class="trackWindow">
+        <canvas class="graphWindow"></canvas>
+
+        <div class="infoWindow">
+            <form id="weightForm">
+                <label for="value">Add entry:</label>
+                <input type="text" id="trackValue" name="trackValue" required>
+                <button type="submit">Submit</button>
+            </form>
+
+            <div class="tableContainer">
+                <table id="myTable"></table>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script type="module" src="trackData.js"></script>
+    <script type="module" src="track.js"></script>
+</body>
+
+</html>
